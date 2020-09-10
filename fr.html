@@ -87,6 +87,7 @@
                         <h4>Langages de programmation</h4>
                         <ul class="list-group">
                             <li class="list-group-item">Java</li>
+                            <li class="list-group-item">SQL</li>
                             <li class="list-group-item">Python</li>
                         </ul>
                     </div>
@@ -95,6 +96,7 @@
                         <h4>Frameworks</h4>
                         <ul class="list-group">
                             <li class="list-group-item">JSF</li>
+                            <li class="list-group-item">Angular</li>
                             <li class="list-group-item">Primefaces</li>
                             <li class="list-group-item">Hibernate</li>
                             <li class="list-group-item">Bootstrap</li>
@@ -134,7 +136,8 @@
                         <span class="glyphicon glyphicon-asterisk"></span>
                         <h4>Autre</h4>
                         <ul class="list-group">
-                            <li class="list-group-item">SQL</li>
+                            <li class="list-group-item">Google Analytics</li>
+                            <li class="list-group-item">SEO</li>
                             <li class="list-group-item">MS Word/Excel</li>
                             <li class="list-group-item">Photoshop</li>
                             <li class="list-group-item">Montage vidéo</li>
@@ -162,213 +165,417 @@
                             <li data-target="#myProjects" data-slide-to="6"></li>
                         </ul>
 
+                        <div id="projects-image-popup" class="projects-image-popup">
+                            <div class="projects-image-popup-title">
+                                <h3 id="image-popup-title-text"></h3>
+                            </div>
+                            <div class="projects-image-popup-content">
+                                <img id="projects-image-popup-img" class="projects-image-popup-img">
+                            </div>
+                            <div class="projects-image-popup-footer">
+                                <button type="button" id="projects-image-popup-close" class="btn btn-info"><span
+                                        class="glyphicon-projects-close glyphicon glyphicon-remove"> Fermer</button>
+                            </div>
+                        </div>
+                        <div id="projects-image-popup-outside-bg"></div>
+
                         <div class="carousel-inner carousel-slider-resize" role="listbox">
 
                             <div class="item active">
-                                <h3 class="myprojects-item-header">Quick Customer Management</h3>
-                                <div id="codinglanguages">
-                                    <a class="codinglanguagesitem" href="#" title="Java 13"
-                                        data-content="Un langage de programmation orienté objectif (de haut niveau) qui peut être utilisé pour développer des applications de bureau, web (Java EE) et mobiles (Android)."
-                                        data-placement="bottom" data-toggle="popover" data-trigger="hover">Java 13</a>
-                                    <a class="codinglanguagesitem" href="#" title="JavaFX"
-                                        data-content="Ce framework est utilisé pour créer des applications de bureau en Java."
-                                        data-placement="bottom" data-toggle="popover" data-trigger="hover">JavaFX</a>
-                                    <a class="codinglanguagesitem" href="#" title="SQLite"
-                                        data-content="Un engin de base de données SQL petit et rapide sans besoin de serveur de base de données."
-                                        data-placement="bottom" data-toggle="popover" data-trigger="hover">SQLite</a>
-
+                                <div class="project-item">
+                                    <div class="project-left-side">
+                                        <div class="project-left-title">
+                                            <h3 class="myprojects-item-header">Magasin en Ligne (Responsive Web Shop)
+                                            </h3>
+                                        </div>
+                                        <div class="project-left-img">
+                                            <img class="projects-image img-responsive img-rounded slider-img-custom-style"
+                                                src="images/responsive-web-shop.gif" alt='Responsive Web Shop'>
+                                        </div>
+                                        <div class="project-left-buttons">
+                                            <a target="_blank"
+                                                href="https://github.com/a-dridi/Responsive_Web_Shop"><button
+                                                    type="button" class="btn btn-info"
+                                                    style="margin-right: 20px;margin-bottom:10px;color:white;font-weight: bold;"><span
+                                                        class="glyphicon-projects glyphicon glyphicon-folder-open">
+                                                    </span>
+                                                    Code
+                                                    source</button></a>
+                                            <a target="_blank" href="https://youtu.be/XfQeOiCm28g"><button type="button"
+                                                    class="btn btn-info"
+                                                    style="color:white;margin-bottom:10px;font-weight: bold"><span
+                                                        class="glyphicon-projects glyphicon glyphicon-facetime-video">
+                                                    </span>
+                                                    Video</button></a>
+                                        </div>
+                                    </div>
+                                    <div class="project-right-side">
+                                        <div class="project-right-technology">
+                                            <div id="codinglanguages">
+                                                <a class="codinglanguagesitem" href="#" title="Java"
+                                                    data-content="Un langage de programmation (de haut niveau) orienté vers les objectifs qui peut être utilisé pour développer des applications de bureau, web (Java EE) et mobiles (Android)."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">Java</a>
+                                                <a class="codinglanguagesitem" href="#" title="Java"
+                                                    data-content="SDK PayPal pour la mise en place de la passerelle de paiement de cette boutique en ligne."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">PayPal passerelle de paiement</a>
+                                                <a class="codinglanguagesitem" href="#" title="JSF"
+                                                    data-content="Un cadre pour développer des applications web avec MVC (Model, View and Controller)."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">JSF</a>
+                                                <a class="codinglanguagesitem" href="#" title="Hibernate"
+                                                    data-content="Un cadre utilisé pour créer des bases de données par le biais d'un modèle (classes Java) pour votre application Java."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">Hibernate</a>
+                                                <a class="codinglanguagesitem" href="#" title="Primefaces"
+                                                    data-content="Un cadre d'interface utilisateur pour votre application web Java."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">Primefaces</a>
+                                                <a class="codinglanguagesitem" href="#" title="HTML"
+                                                    data-content="Un langage de conception (markup) pour créer la base d'une page web."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">HTML</a>
+                                                <a class="codinglanguagesitem" href="#" title="CSS"
+                                                    data-content="Un langage de conception permettant de modifier l'apparence d'un site web ou d'une interface utilisateur."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">CSS</a>
+                                            </div>
+                                        </div>
+                                        <div class="project-right-description">
+                                            <h4>Une boutique en ligne facile à configurer et utilisable sur tous les
+                                                appareils (smartphone, tablette et PC de bureau). Les clients peuvent
+                                                commander et payer directement avec votre compte PayPal. Il n'est pas
+                                                nécessaire de s'inscrire et le statut de la commande peut être vérifié
+                                                en entrant l'adresse électronique du client et le numéro de commande.
+                                            </h4>
+                                        </div>
+                                    </div>
                                 </div>
-                                <img class="img-responsive img-rounded slider-img-custom-style"
-                                    src="images/quickcustomermanagement_overview.PNG" />
-                                <h4>Une application de bureau pour la gestion des clients et des factures. Les PDF de
-                                    factures peuvent
-                                    être créé et envoyé au client en un seul clic. Vous pouvez également créer
-                                    et les ajouter à la facture. Cette application est disponible dans plusieurs
-                                    langues. </h4>
-                                <a target="_blank" href="https://github.com/a-dridi/QuickCustomerManagement"><button
-                                        type="button" class="btn btn-info"
-                                        style="margin-right: 20px;margin-bottom:10px;color:white;font-weight: bold;"><span
-                                            class="glyphicon-projects glyphicon glyphicon-folder-open"> </span> Code
-                                        source</button></a>
-                                <a target="_blank" href="https://youtu.be/Aj7FCK35exI"><button type="button"
-                                        class="btn btn-info"
-                                        style="color:white;margin-bottom:10px;font-weight: bold"><span
-                                            class="glyphicon-projects glyphicon glyphicon-facetime-video"> </span>
-                                        Video</button></a>
                             </div>
 
                             <div class="item">
-                                <h3 class="myprojects-item-header">Do Tasks Reach Goals</h3>
-                                <div id="codinglanguages">
-                                    <a class="codinglanguagesitem" href="#" title="Java"
-                                        data-content="Un langage de programmation (de haut niveau) orienté vers les objectifs qui peut être utilisé pour développer des applications de bureau, web (Java EE) et mobiles (Android)."
-                                        data-placement="bottom" data-toggle="popover" data-trigger="hover">Java</a>
-                                    <a class="codinglanguagesitem" href="#" title="Android"
-                                        data-content="Une plateforme de programmation pour développer des applications mobiles en Java ou Kotlin pour les appareils Android."
-                                        data-placement="bottom" data-toggle="popover" data-trigger="hover">Android</a>
+                                <div class="project-item">
+                                    <div class="project-left-side">
+                                        <div class="project-left-title">
+                                            <h3 class="myprojects-item-header">Quick Customer Management</h3>
+                                        </div>
+                                        <div class="project-left-img">
+                                            <img class="projects-image img-responsive img-rounded slider-img-custom-style"
+                                                src="images/quickcustomermanagement_overview.PNG"
+                                                alt="Quick Customer Management">
+                                        </div>
+                                        <div class="project-left-buttons">
+                                            <a target="_blank"
+                                                href="https://github.com/a-dridi/QuickCustomerManagement"><button
+                                                    type="button" class="btn btn-info"
+                                                    style="margin-right: 20px;margin-bottom:10px;color:white;font-weight: bold;"><span
+                                                        class="glyphicon-projects glyphicon glyphicon-folder-open">
+                                                    </span> Code
+                                                    source</button></a>
+                                            <a target="_blank" href="https://youtu.be/Aj7FCK35exI"><button type="button"
+                                                    class="btn btn-info"
+                                                    style="color:white;margin-bottom:10px;font-weight: bold"><span
+                                                        class="glyphicon-projects glyphicon glyphicon-facetime-video">
+                                                    </span>
+                                                    Video</button></a> </div>
+                                    </div>
+                                    <div class="project-right-side">
+                                        <div class="project-right-technology">
+                                            <div id="codinglanguages">
+                                                <a class="codinglanguagesitem" href="#" title="Java 13"
+                                                    data-content="Un langage de programmation orienté objectif (de haut niveau) qui peut être utilisé pour développer des applications de bureau, web (Java EE) et mobiles (Android)."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">Java 13</a>
+                                                <a class="codinglanguagesitem" href="#" title="JavaFX"
+                                                    data-content="Ce framework est utilisé pour créer des applications de bureau en Java."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">JavaFX</a>
+                                                <a class="codinglanguagesitem" href="#" title="SQLite"
+                                                    data-content="Un engin de base de données SQL petit et rapide sans besoin de serveur de base de données."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">SQLite</a>
+                                            </div>
+                                        </div>
+                                        <div class="project-right-description">
+                                            <h4>Une application de bureau pour la gestion des clients et des factures.
+                                                Les PDF de
+                                                factures peuvent
+                                                être créé et envoyé au client en un seul clic. <br /><br />Vous pouvez
+                                                également créer
+                                                et les ajouter à la facture. Cette application est disponible dans
+                                                plusieurs
+                                                langues. </h4>
+                                        </div>
+                                    </div>
                                 </div>
-                                <img class="img-responsive img-rounded slider-img-custom-style"
-                                    src="images/dotasksreachgoals_ad_fr.png" />
-                                <h4>Une application qui vous permet de créer des tâches et des catégories de tâches.
-                                    Vous pouvez suivre vos tâches et vous serez averti si vous avez des tâches en
-                                    retard. Toutes les tâches et les tâches terminées sont affichées dans d'autres
-                                    points de menu. Atteignez vos objectifs qui peuvent être définis dans les paramètres
-                                    de l'application. </h4>
-                                <a target="_blank"
-                                    href="https://play.google.com/store/apps/details?id=ardservices.dotasksreachgoals"><button
-                                        type="button" class="btn btn-info"
-                                        style="margin-right: 20px;color:white;font-weight: bold;"><span
-                                            class="glyphicon-projects glyphicon glyphicon-download-alt"> </span>
-                                        Télécharger</button></a>
                             </div>
 
                             <div class="item">
-                                <h3 class="myprojects-item-header">Logiciel d'administration "Haushaltsverwaltung"</h3>
-                                <div id="codinglanguages">
-                                    <a class="codinglanguagesitem" href="#" title="Java"
-                                        data-content="Un langage de programmation (de haut niveau) orienté vers les objectifs qui peut être utilisé pour développer des applications de bureau, web (Java EE) et mobiles (Android)."
-                                        data-placement="bottom" data-toggle="popover" data-trigger="hover">Java</a>
-                                    <a class="codinglanguagesitem" href="#" title="JSF"
-                                        data-content="Un cadre pour développer des applications web avec MVC (Model, View and Controller)."
-                                        data-placement="bottom" data-toggle="popover" data-trigger="hover">JSF</a>
-                                    <a class="codinglanguagesitem" href="#" title="Hibernate"
-                                        data-content="Un cadre utilisé pour créer des bases de données par le biais d'un modèle (classes Java) pour votre application Java."
-                                        data-placement="bottom" data-toggle="popover" data-trigger="hover">Hibernate</a>
-                                    <a class="codinglanguagesitem" href="#" title="Primefaces"
-                                        data-content="Un cadre d'interface utilisateur pour votre application web Java."
-                                        data-placement="bottom" data-toggle="popover"
-                                        data-trigger="hover">Primefaces</a>
-                                    <a class="codinglanguagesitem" href="#" title="HTML"
-                                        data-content="Un langage de conception (markup) pour créer la base d'une page web."
-                                        data-placement="bottom" data-toggle="popover" data-trigger="hover">HTML</a>
-                                    <a class="codinglanguagesitem" href="#" title="CSS"
-                                        data-content="Un langage de conception permettant de modifier l'apparence d'un site web ou d'une interface utilisateur."
-                                        data-placement="bottom" data-toggle="popover" data-trigger="hover">CSS</a>
+                                <div class="project-item">
+                                    <div class="project-left-side">
+                                        <div class="project-left-title">
+                                            <h3 class="myprojects-item-header">Do Tasks Reach Goals</h3>
+                                        </div>
+                                        <div class="project-left-img">
+                                            <img class="projects-image img-responsive img-rounded slider-img-custom-style"
+                                                src="images/dotasksreachgoals_ad_fr.png" alt="Do Tasks Reach Goals">
+                                        </div>
+                                        <div class="project-left-buttons">
+                                            <a target="_blank"
+                                                href="https://play.google.com/store/apps/details?id=ardservices.dotasksreachgoals"><button
+                                                    type="button" class="btn btn-info"
+                                                    style="margin-right: 20px;color:white;font-weight: bold;"><span
+                                                        class="glyphicon-projects glyphicon glyphicon-download-alt">
+                                                    </span>
+                                                    Télécharger</button></a>
+                                        </div>
+                                    </div>
+                                    <div class="project-right-side">
+                                        <div class="project-right-technology">
+                                            <div id="codinglanguages">
+                                                <a class="codinglanguagesitem" href="#" title="Java"
+                                                    data-content="Un langage de programmation (de haut niveau) orienté vers les objectifs qui peut être utilisé pour développer des applications de bureau, web (Java EE) et mobiles (Android)."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">Java</a>
+                                                <a class="codinglanguagesitem" href="#" title="Android"
+                                                    data-content="Une plateforme de programmation pour développer des applications mobiles en Java ou Kotlin pour les appareils Android."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">Android</a>
+                                            </div>
+                                        </div>
+                                        <div class="project-right-description">
+                                            <h4>Une application qui vous permet de créer des tâches et des catégories de
+                                                tâches.
+                                                Vous pouvez suivre vos tâches et vous serez averti si vous avez des
+                                                tâches en
+                                                retard.<br /><br />Toutes les tâches et les tâches terminées sont
+                                                affichées dans
+                                                d'autres
+                                                points de menu. Atteignez vos objectifs qui peuvent être définis dans
+                                                les paramètres
+                                                de l'application. </h4>
+                                        </div>
+                                    </div>
                                 </div>
-                                <img class="img-responsive img-rounded slider-img-custom-style"
-                                    src="https://raw.githubusercontent.com/a-dridi/Haushaltsverwaltung/master/img/screenshot1.PNG" />
-                                <h4>Une application web Java qui vous permet de gérer les données de votre entreprise ou
-                                    vos données personnelles telles que les finances, les livres,
-                                    vidéos et
-                                    plus. L'application peut être auto-hébergée sur votre
-                                    serveur Tomcat et utilisée sur votre ordinateur ou votre smartphone. Utilise JSF,
-                                    JQuery et Primefaces. L'application nécessite une base de données Postgresql et
-                                    peut être connectée à votre instance Nextcloud ou à toute application Webdav.</h4>
-                                <a target="_blank" href="https://github.com/a-dridi/Haushaltsverwaltung"><button
-                                        type="button" class="btn btn-info"
-                                        style="margin-right: 20px;margin-bottom:10px;color:white;font-weight: bold;"><span
-                                            class="glyphicon-projects glyphicon glyphicon-folder-open"> </span> Code
-                                        source</button></a>
-                                <a target="_blank" href="https://dev.ard-site.net/webapp_haushaltsverwaltung/"><button
-                                        type="button" class="btn btn-info"
-                                        style="margin-right: 20px;margin-bottom:10px;color:white;font-weight: bold;"><span
-                                            class="glyphicon-projects glyphicon glyphicon-eye-open"> </span>
-                                        Demo</button></a>
-                                <a target="_blank" href="https://www.youtube.com/watch?v=XlOqgEFX-UI"><button
-                                        type="button" class="btn btn-info"
-                                        style="color:white;margin-bottom:10px;font-weight: bold"><span
-                                            class="glyphicon-projects glyphicon glyphicon-facetime-video"> </span>
-                                        Video</button></a>
                             </div>
 
                             <div class="item">
-                                <h3 class="myprojects-item-header">Number Trainer</h3>
-                                <div id="codinglanguages">
-                                    <a class="codinglanguagesitem" href="#" title="Java"
-                                        data-content="Un langage de programmation (de haut niveau) orienté vers les objectifs qui peut être utilisé pour développer des applications de bureau, web (Java EE) et mobiles (Android)."
-                                        data-placement="bottom" data-toggle="popover" data-trigger="hover">Java</a>
-                                    <a class="codinglanguagesitem" href="#" title="Android"
-                                        data-content="Une plateforme de programmation pour développer des applications mobiles en Java ou Kotlin pour les appareils Android."
-                                        data-placement="bottom" data-toggle="popover" data-trigger="hover">Android</a>
+                                <div class="project-item">
+                                    <div class="project-left-side">
+                                        <div class="project-left-title">
+                                            <h3 class="myprojects-item-header">Logiciel d'administration
+                                                "Haushaltsverwaltung" </h3>
+                                        </div>
+                                        <div class="project-left-img">
+                                            <img class="projects-image img-responsive img-rounded slider-img-custom-style"
+                                                src="https://raw.githubusercontent.com/a-dridi/Haushaltsverwaltung/master/img/screenshot1.PNG"
+                                                alt='Logiciel d-administration
+                                                "Haushaltsverwaltung"'>
+                                        </div>
+                                        <div class="project-left-buttons">
+                                            <a target="_blank"
+                                                href="https://github.com/a-dridi/Haushaltsverwaltung"><button
+                                                    type="button" class="btn btn-info"
+                                                    style="margin-right: 20px;margin-bottom:10px;color:white;font-weight: bold;"><span
+                                                        class="glyphicon-projects glyphicon glyphicon-folder-open">
+                                                    </span> Code
+                                                    source</button></a>
+                                            <a target="_blank"
+                                                href="https://dev.ard-site.net/webapp_haushaltsverwaltung/"><button
+                                                    type="button" class="btn btn-info"
+                                                    style="margin-right: 20px;margin-bottom:10px;color:white;font-weight: bold;"><span
+                                                        class="glyphicon-projects glyphicon glyphicon-eye-open"> </span>
+                                                    Demo</button></a>
+                                            <a target="_blank"
+                                                href="https://www.youtube.com/watch?v=XlOqgEFX-UI"><button type="button"
+                                                    class="btn btn-info"
+                                                    style="color:white;margin-bottom:10px;font-weight: bold"><span
+                                                        class="glyphicon-projects glyphicon glyphicon-facetime-video">
+                                                    </span>
+                                                    Video</button></a>
+                                        </div>
+                                    </div>
+                                    <div class="project-right-side">
+                                        <div class="project-right-technology">
+                                            <div id="codinglanguages">
+                                                <a class="codinglanguagesitem" href="#" title="Java"
+                                                    data-content="Un langage de programmation (de haut niveau) orienté vers les objectifs qui peut être utilisé pour développer des applications de bureau, web (Java EE) et mobiles (Android)."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">Java</a>
+                                                <a class="codinglanguagesitem" href="#" title="JSF"
+                                                    data-content="Un cadre pour développer des applications web avec MVC (Model, View and Controller)."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">JSF</a>
+                                                <a class="codinglanguagesitem" href="#" title="Hibernate"
+                                                    data-content="Un cadre utilisé pour créer des bases de données par le biais d'un modèle (classes Java) pour votre application Java."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">Hibernate</a>
+                                                <a class="codinglanguagesitem" href="#" title="Primefaces"
+                                                    data-content="Un cadre d'interface utilisateur pour votre application web Java."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">Primefaces</a>
+                                                <a class="codinglanguagesitem" href="#" title="HTML"
+                                                    data-content="Un langage de conception (markup) pour créer la base d'une page web."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">HTML</a>
+                                                <a class="codinglanguagesitem" href="#" title="CSS"
+                                                    data-content="Un langage de conception permettant de modifier l'apparence d'un site web ou d'une interface utilisateur."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">CSS</a>
+                                            </div>
+                                        </div>
+                                        <div class="project-right-description">
+                                            <h4>Une application web Java qui vous permet de gérer les données de votre
+                                                entreprise ou
+                                                vos données personnelles telles que les finances, les livres,
+                                                vidéos et
+                                                plus. <br /><br />L'application peut être auto-hébergée sur votre
+                                                serveur Tomcat et utilisée sur votre ordinateur ou votre smartphone.
+                                                Utilise JSF,
+                                                JQuery et Primefaces. L'application nécessite une base de données
+                                                Postgresql et
+                                                peut être connectée à votre instance Nextcloud ou à toute application
+                                                Webdav.</h4>
+                                        </div>
+                                    </div>
                                 </div>
-                                <img class="img-responsive img-rounded slider-img-custom-style"
-                                    src="images/numbertrainer_wallpaper.png" />
-                                <h4>Entraînez votre mémoire avec les chiffres et essayez de vous souvenir du plus grand
-                                    nombre possible. Le système de niveau de ce jeu vous permet d’obtenir un sens
-                                    unique de la réussite à chaque fois que vous avez réussi en entrant les bons
-                                    numéros. Votre statut de niveau sera automatiquement enregistré et la difficulté
-                                    augmentera par rapport à votre niveau. Disponible sur le Google Play Store.</h4>
-                                <a target="_blank"
-                                    href="https://play.google.com/store/apps/details?id=ardservices.numberstrainer"><button
-                                        type="button" class="btn btn-info"
-                                        style="margin-right: 20px;color:white;font-weight: bold;"><span
-                                            class="glyphicon-projects glyphicon glyphicon-download-alt"> </span>
-                                        Télécharger</button></a>
                             </div>
 
                             <div class="item">
-                                <h3 class="myprojects-item-header">BMI Tracker</h3>
-                                <div id="codinglanguages">
-                                    <a class="codinglanguagesitem" href="#" title="Python"
-                                        data-content="Un langage de programmation (de haut niveau) qui peut être utilisé pour créer des scripts, des applications de bureau et des applications web (Django/Flask)."
-                                        data-placement="bottom" data-toggle="popover" data-trigger="hover">Python</a>
-                                    <a class="codinglanguagesitem" href="#" title="PyQt5"
-                                        data-content="Une boîte à outils et un cadre pour la création d'applications de bureau en Python avec des interfaces graphiques dans la conception native du système d'exploitation."
-                                        data-placement="bottom" data-toggle="popover" data-trigger="hover">PyQt5</a>
+                                <div class="project-item">
+                                    <div class="project-left-side">
+                                        <div class="project-left-title">
+                                            <h3 class="myprojects-item-header">BMI Tracker</h3>
+                                        </div>
+                                        <div class="project-left-img">
+                                            <img class="projects-image img-responsive img-rounded slider-img-custom-style-large"
+                                                src="https://raw.githubusercontent.com/a-dridi/BMI-Tracker/master/img/screenshot1.JPG"
+                                                alt="BMI Tracker">
+                                        </div>
+                                        <div class="project-left-buttons">
+                                            <a target="_blank" href="https://github.com/a-dridi/BMI-Tracker"><button
+                                                    type="button" class="btn btn-info"
+                                                    style="margin-right: 20px;margin-bottom:10px;color:white;font-weight: bold;"><span
+                                                        class="glyphicon-projects glyphicon glyphicon-folder-open">
+                                                    </span> Code
+                                                    source</button></a>
+                                            <a target="_blank"
+                                                href="https://github.com/a-dridi/BMI-Tracker/releases"><button
+                                                    type="button" class="btn btn-info"
+                                                    style="color:white;margin-bottom:10px;font-weight: bold"><span
+                                                        class="glyphicon-projects glyphicon glyphicon-download-alt">
+                                                    </span>
+                                                    Télécharger</button></a>
+                                        </div>
+                                    </div>
+                                    <div class="project-right-side">
+                                        <div class="project-right-technology">
+                                            <div id="codinglanguages">
+                                                <a class="codinglanguagesitem" href="#" title="Python"
+                                                    data-content="A (high level) programming language that can be used to create scripts, desktop applications and web applications (Django/Flask)."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">Python</a>
+                                                <a class="codinglanguagesitem" href="#" title="PyQt5"
+                                                    data-content="A toolkit and framework for creating Python desktop applications GUIs in the native design of the operating system."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">PyQt5</a>
+                                            </div>
+                                        </div>
+                                        <div class="project-right-description">
+                                            <h4>Cette application vous permet de suivre votre IMC et votre poids. Vous
+                                                pouvez
+                                                calculer votre IMC et vérifier si vous avez un IMC en bonne santé.
+                                                <br /><br />Tous vos calculs
+                                                peuvent être exportés vers un fichier PDF ou CSV.</h4>
+                                        </div>
+                                    </div>
                                 </div>
-                                <img class="img-responsive img-rounded slider-img-custom-style"
-                                    src="https://raw.githubusercontent.com/a-dridi/BMI-Tracker/master/img/screenshot1.JPG"
-                                    alt="BMI Tracker" />
-                                <h4>Cette application vous permet de suivre votre IMC et votre poids. Vous pouvez
-                                    calculer votre IMC et vérifier si vous avez un IMC en bonne santé. Tous vos calculs
-                                    peuvent être exportés vers un fichier PDF ou CSV.</h4>
-                                <a target="_blank" href="https://github.com/a-dridi/BMI-Tracker"><button type="button"
-                                        class="btn btn-info"
-                                        style="margin-right: 20px;margin-bottom:10px;color:white;font-weight: bold;"><span
-                                            class="glyphicon-projects glyphicon glyphicon-folder-open"> </span> Code
-                                        source</button></a>
-                                <a target="_blank" href="https://github.com/a-dridi/BMI-Tracker/releases"><button
-                                        type="button" class="btn btn-info"
-                                        style="color:white;margin-bottom:10px;font-weight: bold"><span
-                                            class="glyphicon-projects glyphicon glyphicon-download-alt"> </span>
-                                        Télécharger</button></a>
                             </div>
 
                             <div class="item">
-                                <h3 class="myprojects-item-header">Boutique en ligne pour les agences de voyage
-                                    "Reisebuero"</h3>
-                                <div id="codinglanguages">
-                                    <a class="codinglanguagesitem" href="#" title="Java"
-                                        data-content="Un langage de programmation (de haut niveau) orienté vers les objectifs qui peut être utilisé pour développer des applications de bureau, web (Java EE) et mobiles (Android)."
-                                        data-placement="bottom" data-toggle="popover" data-trigger="hover">Java</a>
-                                    <a class="codinglanguagesitem" href="#" title="JSF"
-                                        data-content="Un cadre pour développer des applications web avec MVC (Model, View and Controller)."
-                                        data-placement="bottom" data-toggle="popover" data-trigger="hover">JSF</a>
-                                    <a class="codinglanguagesitem" href="#" title="Hibernate"
-                                        data-content="Un cadre utilisé pour créer des bases de données par le biais d'un modèle (classes Java) pour votre application Java."
-                                        data-placement="bottom" data-toggle="popover" data-trigger="hover">Hibernate</a>
-                                    <a class="codinglanguagesitem" href="#" title="HTML"
-                                        data-content="Un langage de conception (markup) pour créer la base d'une page web."
-                                        data-placement="bottom" data-toggle="popover" data-trigger="hover">HTML</a>
-                                    <a class="codinglanguagesitem" href="#" title="CSS"
-                                        data-content="Un langage de conception permettant de modifier l'apparence d'un site web ou d'une interface utilisateur."
-                                        data-placement="bottom" data-toggle="popover" data-trigger="hover">CSS</a>
+                                <div class="project-item">
+                                    <div class="project-left-side">
+                                        <div class="project-left-title">
+                                            <h3 class="myprojects-item-header">Boutique en ligne pour les agences de
+                                                voyage "Reisebuero"
+                                            </h3>
+                                        </div>
+                                        <div class="project-left-img">
+                                            <img class="projects-image img-responsive img-rounded slider-img-custom-style-large"
+                                                src="https://raw.githubusercontent.com/a-dridi/Reisebuero/master/screenshot.JPG"
+                                                alt='Boutique en ligne pour les agences de voyage "Reisebuero"'>
+                                        </div>
+                                        <div class="project-left-buttons">
+                                            <a target="_blank" href="https://github.com/a-dridi/Reisebuero"><button
+                                                    type="button" class="btn btn-info"
+                                                    style="margin-right: 20px;color:white;font-weight: bold;"><span
+                                                        class="glyphicon-projects glyphicon glyphicon-folder-open">
+                                                    </span> Code
+                                                    source</button></a>
+                                        </div>
+                                    </div>
+                                    <div class="project-right-side">
+                                        <div class="project-right-technology">
+                                            <div id="codinglanguages">
+                                                <a class="codinglanguagesitem" href="#" title="Java"
+                                                    data-content="Un langage de programmation (de haut niveau) orienté vers les objectifs qui peut être utilisé pour développer des applications de bureau, web (Java EE) et mobiles (Android)."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">Java</a>
+                                                <a class="codinglanguagesitem" href="#" title="JSF"
+                                                    data-content="Un cadre pour développer des applications web avec MVC (Model, View and Controller)."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">JSF</a>
+                                                <a class="codinglanguagesitem" href="#" title="Hibernate"
+                                                    data-content="Un cadre utilisé pour créer des bases de données par le biais d'un modèle (classes Java) pour votre application Java."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">Hibernate</a>
+                                                <a class="codinglanguagesitem" href="#" title="HTML"
+                                                    data-content="Un langage de conception (markup) pour créer la base d'une page web."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">HTML</a>
+                                                <a class="codinglanguagesitem" href="#" title="CSS"
+                                                    data-content="Un langage de conception permettant de modifier l'apparence d'un site web ou d'une interface utilisateur."
+                                                    data-placement="bottom" data-toggle="popover"
+                                                    data-trigger="hover">CSS</a>
+                                            </div>
+                                        </div>
+                                        <div class="project-right-description">
+                                            <h4>Une application Web JSF pour les agences de voyages. Les utilisateurs
+                                                peuvent
+                                                utiliser cette application Web pour vérifier les trajets proposés par
+                                                votre
+                                                entreprise et ils peuvent s'abonner au type de trajets qu'ils souhaitent
+                                                pour
+                                                obtenir des offres adaptées.<br /><br />Cette application Web dispose
+                                                d’une fonction
+                                                d’enregistrement et de gestion des utilisateurs qui vous permet de
+                                                suivre vos
+                                                clients pontential.</h4>
+                                        </div>
+                                    </div>
                                 </div>
-                                <img class="img-responsive img-rounded slider-img-custom-style"
-                                    src="https://raw.githubusercontent.com/a-dridi/Reisebuero/master/screenshot.JPG" />
-                                <h4>Une application Web JSF pour les agences de voyages. Les utilisateurs peuvent
-                                    utiliser cette application Web pour vérifier les trajets proposés par votre
-                                    entreprise et ils peuvent s'abonner au type de trajets qu'ils souhaitent pour
-                                    obtenir des offres adaptées. Cette application Web dispose d’une fonction
-                                    d’enregistrement et de gestion des utilisateurs qui vous permet de suivre vos
-                                    clients pontential.</h4>
-                                <a target="_blank" href="https://github.com/a-dridi/Reisebuero"><button type="button"
-                                        class="btn btn-info"
-                                        style="margin-right: 20px;color:white;font-weight: bold;"><span
-                                            class="glyphicon-projects glyphicon glyphicon-folder-open"> </span> Code
-                                        source</button></a>
                             </div>
+
                             <div class="item">
-                                <h3 class="myprojects-item-header">Plus de mes projets</h3>
-                                <img class="img-responsive img-rounded slider-img-custom-style"
-                                    src="images/githubpage.JPG" />
-                                <h4>Si vous voulez voir plus d'applications et de scripts que j'ai créés, veuillez
-                                    consulter les référentiels sur la page Github.</h4>
-                                <a target="_blank" href="https://github.com/a-dridi/"><button type="button"
-                                        class="btn btn-info"
-                                        style="margin-right: 20px;color:white;font-weight: bold;"><span
-                                            class="glyphicon-projects glyphicon glyphicon-share"> </span> Page
-                                        Github</button></a>
+                                <div class="project-left-title">
+                                    <h3 class="myprojects-item-header">Plus de mes projets</h3>
+                                </div>
+                                <div class="project-left-img">
+                                    <img class="img-responsive img-rounded slider-img-custom-style-medium"
+                                        src="images/githubpage.JPG" />
+                                </div>
+                                <div class="project-right-description" style="text-align: center">
+                                    <h4>Si vous voulez voir plus d'applications et de scripts que j'ai créés, veuillez
+                                        consulter les référentiels sur la page Github.</h4>
+                                </div>
+                                <div class="project-left-buttons">
+                                    <a target="_blank" href="https://github.com/a-dridi/"><button type="button"
+                                            class="btn btn-info"
+                                            style="margin-right: 20px;color:white;font-weight: bold;"><span
+                                                class="glyphicon-projects glyphicon glyphicon-share"> </span> Page
+                                            Github</button></a>
+                                </div>
 
                             </div>
                         </div>
@@ -412,7 +619,7 @@
                             obtenu un résultat très positif. <br>
                             Si vous voulez en savoir plus sur moi ou sur ce que je fais, contactez-moi ou visitez ma
                             page Github.
-							<br>
+                            <br>
                             <br>
                         </h4>
                     </div>
@@ -436,17 +643,21 @@
                             <br>
                             <br>
                             <br>
-                            Vous pouvez voir certains de mes sites Web créés sur mon autre site Web de portefeuille de webdesign, qui peut être accédé par le bouton ci-dessous. 
+                            Vous pouvez voir certains de mes sites Web créés sur mon autre site Web de portefeuille de
+                            webdesign, qui peut être accédé par le bouton ci-dessous.
                             <br>
                             <br>
                             <br>
-                            Je peux créer des sites Web réactifs qui utilisent des langages de programmation et des cadres communs. Le site web créé peut être hébergé sur un serveur web ou il peut être créé via un CMS (Joomla ou Wordpress) avec son modèle créé sur mesure. 
+                            Je peux créer des sites Web réactifs qui utilisent des langages de programmation et des
+                            cadres communs. Le site web créé peut être hébergé sur un serveur web ou il peut être créé
+                            via un CMS (Joomla ou Wordpress) avec son modèle créé sur mesure.
                             <br>
                             <br>
                             <br>
-                            <a target="_blank" href="https://webdesign.ard-site.net/"><button type="button" class="btn btn-info"
-                                style="margin-right: 20px;color:white;font-weight: bold;">Voir le webdesign portfolio</button></a>
-                             <br>
+                            <a target="_blank" href="https://webdesign.ard-site.net/"><button type="button"
+                                    class="btn btn-info" style="margin-right: 20px;color:white;font-weight: bold;">Voir
+                                    le webdesign portfolio</button></a>
+                            <br>
                             <br>
                             <br>
                             <br>
@@ -469,7 +680,8 @@
                 CONTACT</h2>
             <div class="row contact-info-container">
                 <div class="col-sm-4 column-border-styling contact-info-content">
-                    <p>Pour prendre contact avec moi, vous pouvez m'envoyer un email ou me contacter via ce formulaire.</p>
+                    <p>Pour prendre contact avec moi, vous pouvez m'envoyer un email ou me contacter via ce formulaire.
+                    </p>
                     <p><span class="glyphicon glyphicon-user glyphicon-customized"></span>Abderraouf Dridi</p>
                     <p><span class="glyphicon glyphicon-map-marker glyphicon-customized"></span>NÖ, Autriche
                         (AT)</p>
@@ -484,7 +696,8 @@
                                 document.write('' + emailaa + emaila + emailz + emailad + '.' + emailt)
                             </script>
                             <noscript>
-                                <span style="font-weight: bold">Activez Javascript sur votre navigateur pour voir l'adresse email!</span></noscript>
+                                <span style="font-weight: bold">Activez Javascript sur votre navigateur pour voir
+                                    l'adresse email!</span></noscript>
                             </noscript>
                         </span></p>
                     <br>
@@ -495,7 +708,10 @@
                 <div class="col-sm-7">
                     <form id="email-contact-form" method="post" action="email_contact_form.php">
                         <div class="row">
-                            <p><strong>Veuillez entrer l'adresse e-mail avec laquelle vous souhaitez que je vous contacte, votre nom et votre message. Veuillez remplir tous les champs et cases à cocher.</strong> Vous pouvez également entrer votre numéro de téléphone en option. Je vous répondrai dans les plus brefs délais.</p>
+                            <p><strong>Veuillez entrer l'adresse e-mail avec laquelle vous souhaitez que je vous
+                                    contacte, votre nom et votre message. Veuillez remplir tous les champs et cases à
+                                    cocher.</strong> Vous pouvez également entrer votre numéro de téléphone en option.
+                                Je vous répondrai dans les plus brefs délais.</p>
                         </div>
                         <div class="row">
                             <div class="col-sm-6 form-group">
@@ -503,18 +719,20 @@
                                     required>
                             </div>
                             <div class="col-sm-6 form-group">
-                                <input class="form-control" id="email" name="email" placeholder="Votre Email" type="email"
-                                    required>
+                                <input class="form-control" id="email" name="email" placeholder="Votre Email"
+                                    type="email" required>
                             </div>
                         </div>
-                        <textarea class="form-control" id="message" name="message" placeholder="Votre Message..." rows="5"
-                            required></textarea><br>
+                        <textarea class="form-control" id="message" name="message" placeholder="Votre Message..."
+                            rows="5" required></textarea><br>
                         <div class="row">
                             <div class="col-sm-12 form-group">
-								<div id="checkrecaptcha"></div>
-								<br>
-                                <a href="fr.html"><button class="btn btn-info pull-left" type="submit" style="color:white;font-weight: bold;"><span
-                                            class="glyphicon glyphicon-ok" style="color: white; font-size: 16px; margin-right: 10px"></span>Envoyer</button>
+                                <div id="checkrecaptcha"></div>
+                                <br>
+                                <a href="fr.html"><button id="submitcontactform" class="btn btn-info pull-left"
+                                        type="submit" style="color:white;font-weight: bold;"><span
+                                            class="glyphicon glyphicon-ok"
+                                            style="color: white; font-size: 16px; margin-right: 10px"></span>Envoyer</button>
                                 </a>
                             </div>
                             <div class="col-sm-12 form-group">
@@ -555,49 +773,21 @@
         </div>
     </div>
 
+    <script defer src="js/script.js"></script>
+    <script defer src="js/contact_app.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
     <script>
-        $(".menu-icon").click(function () {
-            $("nav").toggleClass("active");
-        })
-
-        //JS Native - smooth scrolling to all menu links and to top button
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        var onloadCallback = function () {
+            grecaptcha.render("checkrecaptcha", {
+                "sitekey": "XXXXXXXXXXXXXXX",
+                "badge": "inline",
+                "type": "image",
+                "size": "invisible",
             });
-        });
-
-		var todayDate = new Date();
-		document.getElementById("yearDisplay").innerHTML = todayDate.getFullYear();
-		
-		//Coding languages 
-		$(document).ready(function(){
-			$('[data-toggle="popover"]').popover();
-		});		
-		
-		$(document).ready(function(){
-			$('[data-toggle="tooltip"]').tooltip();
-		});
+        };
     </script>
-	
-	
-	<script src="js/contact_app.js"></script>
 
-	
-	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
-	<script>
-		var onloadCallback = function(){
-			grecaptcha.render("checkrecaptcha",{
-				"sitekey": "XXXXXXXXXXXXXXXXXXX",
-				"badge": "inline",
-				"type": "image",
-				"size": "invisible",
-			});
-		};
-	</script>	
 </body>
 
 </html>
