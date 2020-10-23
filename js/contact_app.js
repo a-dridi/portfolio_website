@@ -1,45 +1,66 @@
-$(function () {
-    var form = $('#email-contact-form');
-    var formMessages = $('#form-messages');
+(function loadContactForm() {
+    var contactFormFields = {
+        name: document.getElementById("name"),
+        email: document.getElementById("email"),
+        message: document.getElementById("message"),
+        submitButton: document.getElementById("submitcontactform"),
+    };
+    var formMessages = document.getElementById("form-messages");
 
-    // event listener for the contact form
-    $(form).submit(function (event) {
-        // Stop the browser from submitting the form
+    contactFormFields.submitButton.addEventListener("click", function (event) {
         event.preventDefault();
+        var contactFormRequest = new XMLHttpRequest();
+        var contactFormRequestData;
 
-        // Serializing the form data.
-        var formData = $(form).serialize();
-        //Submit form through AJAX
-        $.ajax({
-            type: 'POST',
-            url: $(form).attr('action'),
-            data: formData
-        }).done(function (response) {
-            // Add sucess message class to the formmessages Div
-            $(formMessages).removeClass('alert alert-danger alert-dismissible')
-            $(formMessages).addClass('alert alert-success alert-dismissible')
-            //Setting the message text
-            $(formMessages).text(response)
-            //clear the contact form
-            $("#name").val('');
-            $("#emal").val('');
-            $("#message").val('');
-        }).fail(function (data) {
-            // Add error message class to the formmessages Div
-            $(formMessages).removeClass('alert alert-success alert-dismissible');
-            $(formMessages).addClass('alert alert-danger alert-dismissible');
-            // Set the message text.
-            if (data.responseText !== '') {
-                if ((data.responseText).length > 20) {
-                    //Sending php emails does not work on this server
-                    $(formMessages).text('' + data.responseText);
-                } else {
-                    $(formMessages).text(' ' + data.responseText);
-                }
+        if (typeof HtmlSanitizer !== "undefined") {
+            //Sanitize output with HtmlSanitizer - https://github.com/jitbit/HtmlSanitizer
+            contactFormRequestData = "name=" + HtmlSanitizer.SanitizeHtml(contactFormFields.name.value) + "&email=" + HtmlSanitizer.SanitizeHtml(contactFormFields.email.value) + "&message=" + HtmlSanitizer.SanitizeHtml(contactFormFields.message.value);
+        } else {
+            contactFormRequestData = "name=" + contactFormFields.name.value + "&email=" + contactFormFields.email.value + "&message=" + contactFormFields.message.value;
+        }
+
+        contactFormRequest.open("post", "email_contact_form.php");
+        contactFormRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        contactFormRequest.onload = function () {
+
+            if (contactFormRequest.status === 200) {
+                //Success
+                formMessages.classList.remove("alert");
+                formMessages.classList.remove("alert-danger");
+                formMessages.classList.remove("alert-dismissible");
+                formMessages.classList.add("alert");
+                formMessages.classList.add("alert-success");
+                formMessages.classList.add("alert-dismissible");
+                formMessages.innerText = contactFormRequest.responseText;
+                document.getElementById("submitcontactform").style.display = "none";
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("message").value = "";
             } else {
-                $(formMessages).text('Sorry. An error occured and your message could not be sent. Please check your entered values or try again later.');
+                //Fail
+                console.log("ERROR - FORM EMAIL NOT SENT");
+                formMessages.classList.remove("alert");
+                formMessages.classList.remove("alert-success");
+                formMessages.classList.remove("alert-dismissible");
+                formMessages.classList.add("alert");
+                formMessages.classList.add("alert-danger");
+                formMessages.classList.add("alert-dismissible");
+                formMessages.innerText = contactFormRequest.responseText;
             }
-        });
+        }
+        contactFormRequest.onerror = function () {
+            //Server Error
+            console.log("Server Error - FORM EMAIL NOT SENT");
+            formMessages.classList.remove("alert");
+            formMessages.classList.remove("alert-success");
+            formMessages.classList.remove("alert-dismissible");
+            formMessages.classList.add("alert");
+            formMessages.classList.add("alert-danger");
+            formMessages.classList.add("alert-dismissible");
+            formMessages.innerText = contactFormRequest.responseText;
+        }
+        contactFormRequest.send(contactFormRequestData);
     });
+}());
 
-});
