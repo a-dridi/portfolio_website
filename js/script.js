@@ -26,6 +26,7 @@
         $('[data-toggle="tooltip"]').tooltip();
     });
 
+    fadeInContentOnScroll();
 }());
 
 /**
@@ -86,4 +87,26 @@ function hideImagePopup(projectImagePopupOutsideBgObject, popupObject) {
     if (popupObject === undefined || popupObject === null) return;
     popupObject.classList.remove("active");
     projectImagePopupOutsideBgObject.classList.remove("active");
+}
+
+/**
+ * JQuery. Display div content in fade in style when its position is reached through scrolling 
+ */
+function fadeInContentOnScroll() {
+    $(document).ready(function () {
+        $('.container').scroll(function () {
+            //Check if the user scrolled to the location of the div that is hidden.
+            $('.hide-div').each(function (divItem) {
+                let bottomOfDivObject = $(this).offset().top + $(this).outerHeight();
+                let bottomOfWindow = $(window).scrollTop() + $(window).height();
+
+                if (bottomOfWindow > bottomOfDivObject / 1.9) {
+                    $(this).animate({
+                        'opacity': '1'
+                    }, 600);
+                }
+            })
+        })
+
+    });
 }

@@ -76,7 +76,7 @@
             </div>
         </div>
 
-        <div id="skills" class="container-content">
+        <div id="skills" class="container-content slide-in">
             <h2 class="section-content-header">Fähigkeiten</h2>
             <div class="container-fluid text-center">
                 <h4>Eine Liste meiner Fähigkeiten (Skills) in Bezug auf IT und Medien.</h4>
@@ -88,7 +88,6 @@
                         <ul class="list-group">
                             <li class="list-group-item">Java</li>
                             <li class="list-group-item">SQL</li>
-                            <li class="list-group-item">Python</li>
                         </ul>
                     </div>
                     <div class="col-sm-4">
@@ -147,7 +146,7 @@
             </div>
         </div>
 
-        <div id="projects" class="container-content container-grey projects-container">
+        <div id="projects" class="container-content container-grey projects-container hide-div">
             <h2 class="section-content-header">Meine Projekte</h2>
             <h4 class="text-center" style="margin-bottom: 80px">Dies ist eine Übersicht über einige meiner erstellten
                 Desktop, Smartphone- und Webanwendungen. Einige meiner Anwendungen sind auch auf Github verfügbar.</h4>
@@ -589,7 +588,7 @@
             </div>
         </div>
 
-        <div id="aboutme" class="container-content">
+        <div id="aboutme" class="container-content hide-div">
             <h2 class="section-content-header about-me-header">Über mich</h2>
             <br>
             <div class="container-fluid">
@@ -626,7 +625,7 @@
             </div>
         </div>
 
-        <div id="webdevelopment" class="container-content container-grey">
+        <div id="webdevelopment" class="container-content container-grey hide-div">
             <h2 class="section-content-header">Web Development</h2>
             <br>
             <div class="container-fluid">
@@ -670,13 +669,13 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row hide-div">
             <div class="col-sm-12 text-center">
                 <img src="images/slidepicture.jpg" width="30%" class="slidepicture-style" />
             </div>
         </div>
 
-        <div id="contact" class="container-content">
+        <div id="contact" class="container-content hide-div">
             <h2 class="section-content-header contact-info-header">
                 Kontakt</h2>
             <div class="row contact-info-container">
@@ -775,13 +774,20 @@
     </div>
 
     <script defer src="js/script.js"></script>
+    <script defer src="js/HtmlSanitizer.js"></script>
     <script defer src="js/contact_app.js"></script>
+    <script type="text/javascript" id="cookiebanner" src="js/cookiebanner.js" data-min-height="21px"
+        data-position="bottom" data-fg="#fff" data-font-size="12px" data-moreinfo="datenschutz.html"
+        data-linkmsg="Mehr Informationen"
+        data-message="Es werden Cookies verwendet, um den Betrieb dieser Webseite zu verbessern.">
+            var cb = new Cookiebanner(options); cb.run();
+        </script>
 
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
     <script>
         var onloadCallback = function () {
             grecaptcha.render("checkrecaptcha", {
-                "sitekey": "XXXXXXXXX",
+                "sitekey": "6LcImlMUAAAAALeC-PZ7lFd_g-NJmTZnlCtG_d6_",
                 "badge": "inline",
                 "type": "image",
                 "size": "invisible",
