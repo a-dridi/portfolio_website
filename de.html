@@ -146,7 +146,7 @@
             </div>
         </div>
 
-        <div id="projects" class="container-content container-grey projects-container hide-div">
+        <div id="projects" class="container-content container-grey projects-container">
             <h2 class="section-content-header">Meine Projekte</h2>
             <h4 class="text-center" style="margin-bottom: 80px">Dies ist eine Übersicht über einige meiner erstellten
                 Desktop, Smartphone- und Webanwendungen. Einige meiner Anwendungen sind auch auf Github verfügbar.</h4>
@@ -588,7 +588,7 @@
             </div>
         </div>
 
-        <div id="aboutme" class="container-content hide-div">
+        <div id="aboutme" class="container-content">
             <h2 class="section-content-header about-me-header">Über mich</h2>
             <br>
             <div class="container-fluid">
@@ -625,8 +625,8 @@
             </div>
         </div>
 
-        <div id="webdevelopment" class="container-content container-grey hide-div">
-            <h2 class="section-content-header">Web Development</h2>
+        <div id="webdevelopment" class="container-content container-grey">
+            <h2 class="section-content-header">Web-Entwicklung</h2>
             <br>
             <div class="container-fluid">
                 <div class="row">
@@ -655,7 +655,7 @@
                             <br>
                             <a target="_blank" href="https://webdesign.ard-site.net/"><button type="button"
                                     class="btn btn-info"
-                                    style="margin-right: 20px;color:white;font-weight: bold;">Webentwicklung-Portfolio
+                                    style="margin-right: 20px;color:white;font-weight: bold;">Portfolio
                                     anschauen</button></a>
                             <br>
                             <br>
@@ -669,40 +669,40 @@
             </div>
         </div>
 
-        <div class="row hide-div">
+        <div class="row">
             <div class="col-sm-12 text-center">
                 <img src="images/slidepicture.jpg" width="30%" class="slidepicture-style" />
             </div>
         </div>
 
-        <div id="contact" class="container-content hide-div">
+        <div id="contact" class="container-content">
             <h2 class="section-content-header contact-info-header">
                 Kontakt</h2>
             <div class="row contact-info-container">
                 <div class="col-sm-4 column-border-styling contact-info-content">
                     <p>Um mit mir in Kontakt zu treten, können Sie mir eine E-Mail senden (schnellere Art) oder mich
-                    <p><span class="glyphicon glyphicon-user glyphicon-customized"></span>Abderraouf Dridi</p>
-                    <p><span class="glyphicon glyphicon-map-marker glyphicon-customized"></span>NÖ, Österreich
-                        (AT)</p>
-                    <p><span class="glyphicon glyphicon-envelope glyphicon-customized"></span> <span
-                            id="emailaddressdisplay">
-                            <script>
-                                emailad = "ard-site"
-                                emailaa = "a."
-                                emaila = "dridi"
-                                emailt = "net"
-                                emailz = "@"
-                                document.write('' + emailaa + emaila + emailz + emailad + '.' + emailt)
-                            </script>
-                            <noscript>
-                                <span style="font-weight: bold">Bitte aktivieren Sie Javascript in Ihrem Browser, um
-                                    die E-Mail-Adresse anzuzeigen!</span></noscript>
-                            </noscript>
-                        </span></p>
-                    <br>
-                    <p>Für weitere Informationen besuchen Sie bitte meine Webseite oder Github-Seite. </p>
-                    <a href="https://github.com/a-dridi/"><button class="btn btn-info"
-                            style="margin-right: 20px;color:white;font-weight: bold;">Github-Seite</button></a>
+                        <p><span class="glyphicon glyphicon-user glyphicon-customized"></span>Abderraouf Dridi</p>
+                        <p><span class="glyphicon glyphicon-map-marker glyphicon-customized"></span>NÖ, Österreich
+                            (AT)</p>
+                        <p><span class="glyphicon glyphicon-envelope glyphicon-customized"></span> <span
+                                id="emailaddressdisplay">
+                                <script>
+                                    emailad = "ard-site"
+                                    emailaa = "a."
+                                    emaila = "dridi"
+                                    emailt = "net"
+                                    emailz = "@"
+                                    document.write('' + emailaa + emaila + emailz + emailad + '.' + emailt)
+                                </script>
+                                <noscript>
+                                    <span style="font-weight: bold">Bitte aktivieren Sie Javascript in Ihrem Browser, um
+                                        die E-Mail-Adresse anzuzeigen!</span></noscript>
+                                </noscript>
+                            </span></p>
+                        <br>
+                        <p>Für weitere Informationen besuchen Sie bitte meine Webseite oder Github-Seite. </p>
+                        <a href="https://github.com/a-dridi/"><button class="btn btn-info"
+                                style="margin-right: 20px;color:white;font-weight: bold;">Github-Seite</button></a>
                 </div>
                 <div class="col-sm-7">
                     <form id="email-contact-form" method="post" action="email_contact_form.php">
@@ -774,20 +774,13 @@
     </div>
 
     <script defer src="js/script.js"></script>
-    <script defer src="js/HtmlSanitizer.js"></script>
     <script defer src="js/contact_app.js"></script>
-    <script type="text/javascript" id="cookiebanner" src="js/cookiebanner.js" data-min-height="21px"
-        data-position="bottom" data-fg="#fff" data-font-size="12px" data-moreinfo="datenschutz.html"
-        data-linkmsg="Mehr Informationen"
-        data-message="Es werden Cookies verwendet, um den Betrieb dieser Webseite zu verbessern.">
-            var cb = new Cookiebanner(options); cb.run();
-        </script>
 
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
     <script>
         var onloadCallback = function () {
             grecaptcha.render("checkrecaptcha", {
-                "sitekey": "6LcImlMUAAAAALeC-PZ7lFd_g-NJmTZnlCtG_d6_",
+                "sitekey": "XXXXXXXXXXXXX",
                 "badge": "inline",
                 "type": "image",
                 "size": "invisible",

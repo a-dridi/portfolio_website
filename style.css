@@ -1,5 +1,6 @@
 :root {
     --main-website-color: #f4511e;
+    --bubble-color: darkorange;
 }
 
 * {
@@ -81,9 +82,15 @@ nav>ul>li a {
 
 .menu-icon>span {
     display: block;
-    background-color: blue;
+    background-color: white;
     height: 30%;
     margin-bottom: 20%;
+}
+
+.menu-icon>span:hover {
+    -webkit-box-shadow: 10px 10px 52px -19px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 52px -19px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 52px -19px rgba(0, 0, 0, 0.75);
 }
 
 .container {
@@ -108,12 +115,29 @@ nav>ul>li a {
 
 .mainfeature {
     position: relative;
-    background-color: var(--main-website-color);
     color: white;
     padding: 110px 0px;
     width: 100%;
     z-index: 1;
     font-family: Montserrat, Arial;
+    background: linear-gradient(-45deg, #f3744e, #da3373, #669eb3, #6cb9a7);
+    background-size: 400% 400%;
+    animation: main-container-background-animation 10s ease infinite;
+    transition: 1s ease-in-out;
+    transition-property: all;
+    top: 10px;
+}
+
+@keyframes main-container-background-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .mainfeature-content {
@@ -124,7 +148,7 @@ nav>ul>li a {
     animation: 0.5s ease-in-out 0s 1 slideinbottom;
 }
 
-.slide-in{
+.slide-in {
     animation: 0.7s ease-in-out 0s 1 slideinbottom;
 }
 
@@ -133,7 +157,7 @@ nav>ul>li a {
         transform: translateY(100%);
         opacity: 0;
     }
-    50%{
+    50% {
         opacity: 0.3;
     }
     100% {
@@ -141,7 +165,7 @@ nav>ul>li a {
     }
 }
 
-.hide-div{
+.hide-div {
     opacity: 0;
 }
 
@@ -161,6 +185,7 @@ nav>ul>li a {
     text-align: center;
     margin-right: auto;
     margin-left: auto;
+    letter-spacing: 3px;
 }
 
 .about-me-header {
@@ -174,7 +199,7 @@ nav>ul>li a {
     padding-bottom: 30px;
     margin-top: 0px;
     margin-bottom: -10px;
-    background-color: #f4511e33;
+    background-color: var(--main-website-color);
     text-align: right;
     -webkit-box-shadow: 10px 23px 29px -18px rgba(0, 0, 0, 0.49);
     -moz-box-shadow: 10px 23px 29px -18px rgba(0, 0, 0, 0.49);
@@ -260,6 +285,14 @@ nav>ul>li a {
 
 .projects-image {
     cursor: pointer;
+    z-index: 55550 !important;
+    transition: ease-in-out 0.3s;
+}
+
+.projects-image:hover {
+    transform: scale(1.5, 1.5);
+    z-index: 55550 !important;
+    transition: ease-in-out 0.5s;
 }
 
 @media (min-width: 1131px) {
@@ -430,7 +463,6 @@ nav>ul>li a {
     color: black !important;
 }
 
-
 .contactbutton {
     border-radius: 4px;
     background-color: white;
@@ -443,6 +475,7 @@ nav>ul>li a {
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
+    transform-origin: left;
 }
 
 .contactbutton span {
@@ -475,6 +508,13 @@ nav>ul>li a {
     right: 0;
 }
 
+.btn-info span:hover, 
+.btn-info ~ span:hover {
+	color: black !important;
+}
+	
+	
+
 .contact-info-header {
     margin-bottom: 40px;
 }
@@ -493,10 +533,6 @@ nav>ul>li a {
     color: white;
     font-size: 13px;
     margin-right: 5px;
-}
-
-.glyphicon-projects:hover {
-    color: black;
 }
 
 .glyphicon-projects-close {
@@ -538,25 +574,25 @@ nav>ul>li a {
 .slider-img-custom-style {
     max-width: 75% !important;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
 }
 
 .slider-img-custom-style-smaller {
     max-width: 35% !important;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
 }
 
 .slider-img-custom-style-medium {
     max-width: 40% !important;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
 }
 
 .slider-img-custom-style-large {
     max-width: 60% !important;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
 }
 
 @media (min-width: 768px) {

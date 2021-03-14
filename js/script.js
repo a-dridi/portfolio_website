@@ -26,7 +26,7 @@
         $('[data-toggle="tooltip"]').tooltip();
     });
 
-    fadeInContentOnScroll();
+    //fadeInContentOnScroll();
 }());
 
 /**
