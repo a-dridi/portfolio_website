@@ -38,9 +38,9 @@
         }
 
         // Set the recipient email address
-        $recipient_var = "admin@arXXXXXXnet";
+        $recipient_var = "kontak@xxxxxx";
         // Setting the email subject
-        $subject_var = "ard Contact form Dev - New message through the contact form of the portfolio website";
+        $subject_var = "[Portfolio Website] - New message through the contact form of the portfolio website";
         // Building the email content
         $email_content_var = "Name: $name\n";
         $email_content_var .= "Email: $email\n\n";

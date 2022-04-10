@@ -8,5 +8,5 @@ There is also a contact form which submits the form data asynchronously and uses
 The website is programmed in HTML, CSS, JS, jQuery, PHP and with the framework Bootstrap. 
 
 This website is hosted on:<br/>
-https://dev.ard-site.net <br/>
-https://dev.ard.ovh
+https://dridi.at <br/>
+

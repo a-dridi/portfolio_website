@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^dridi\.at [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://dridi.at/$1 [R,L]
